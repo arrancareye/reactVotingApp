@@ -1,31 +1,32 @@
 class Product extends React.Component {
   render() {
     return (
-      <div className='item'>
-        <div className='image'>
-          <img src={this.props.productImageUrl} />
-        </div>
-        <div className='middle aligned content'>
-          <div className='header'>
-            <a>
-              <i className='large caret up icon' />
-            </a>
-            {this.props.votes}
+      <div className='column'>
+        <div className="ui card">
+          <div className="content">
+            <div className="right floated meta">14h</div>
+            <a href={this.props.url}><img className="ui avatar image" src={this.props.submitterAvatarUrl} /> </a>
+            {this.props.title}
           </div>
-          <div className='description'>
-            <a href={this.props.url}>
-              {this.props.title}
-            </a>
-            <p>
-              {this.props.description}
-            </p>
+          <div className="image">
+            <img src={this.props.productImageUrl} />
           </div>
-          <div className='extra'>
-            <span>Submitted by:</span>
-            <img
-              className='ui avatar image'
-              src={this.props.submitterAvatarUrl}
-            />
+          <div className="content">
+            <span className="right floated">
+              <i className="heart outline like icon"></i>
+              {this.props.votes}likes
+            </span>
+            <i className="comment icon"></i>
+            3 comments
+          </div>
+          <div className="extra content">
+            <p>{this.props.description}</p>
+          </div>
+          <div className="extra content">
+            <div className="ui large transparent left icon input">
+              <i className="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment..." />
+            </div>
           </div>
         </div>
       </div>
@@ -51,7 +52,7 @@ class ProductList extends React.Component {
 				/>
 	  	));
 		return(
-			<div className = "ui unstackable items">
+			<div className = "ui four column grid">
 				{productComponents}
 			</div>
 		)
