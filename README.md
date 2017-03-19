@@ -17,3 +17,11 @@ npm run server
 ````
 
 The server is now running at [localhost:3000](localhost:3000)
+
+
+or simply run 
+
+````
+npm start
+````
+in root directory of project
