@@ -16,3 +16,25 @@ i.icon {
 .input-group{
 	margin-top: 20px;
 }
+
+.navbar-brand{
+		float: left;
+}
+
+.navbar-brand img{
+	width: 30px;
+
+}
+
+h2{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.dropdown{
+	display: inline-block;
+}
+
+.list{
+	display: block;
+}

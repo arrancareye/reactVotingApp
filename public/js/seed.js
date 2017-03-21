@@ -12,6 +12,7 @@ window.Seed = (function () {
       votes: generateVoteCount(),
       submitterAvatarUrl: 'images/avatars/daniel.jpg',
       productImageUrl: 'images/products/image-aqua.png',
+      price: 300
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ window.Seed = (function () {
       votes: generateVoteCount(),
       submitterAvatarUrl: 'images/avatars/kristy.png',
       productImageUrl: 'images/products/image-rose.png',
+      price: 799
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ window.Seed = (function () {
       votes: generateVoteCount(),
       submitterAvatarUrl: 'images/avatars/veronika.jpg',
       productImageUrl: 'images/products/image-steel.png',
+      price: 456
     }
   ];
 

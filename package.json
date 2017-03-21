@@ -13,6 +13,7 @@
   "dependencies": {
     "concurrently": "2.2.0",
     "live-server": "git://github.com/acco/live-server.git",
+    "react-addons-css-transition-group": "^15.4.2",
     "semantic-ui": "^2.2.9"
   }
 }
