@@ -1,15 +1,11 @@
 class Product extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleUpVote = this.handleUpVote.bind(this);
-    this.handleDownVote = this.handleDownVote.bind(this);
-  }
-  handleUpVote(){
-    this.props.onVote(this.props.id);
-  }
-  handleDownVote(){
-    this.props.onUnVote(this.props.id);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.handleUpVote = this.handleUpVote.bind(this);
+  //   this.handleDownVote = this.handleDownVote.bind(this);
+  // }
+  handleUpVote = () => (this.props.onVote(this.props.id));
+  handleDownVote = () => (this.props.onUnVote(this.props.id));
   render() {
     return (
       <div className="col-md-4">
@@ -35,19 +31,19 @@ class Product extends React.Component {
 }
 
 class ProductList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      products : []
-    }
-    this.handleProductUpVote = this.handleProductUpVote.bind(this);
-    this.handleProductDownVote = this.handleProductDownVote.bind(this);
+  state = {
+    products : []
   }
+  // constructor(props) {
+  //   super(props);
+  //   this.handleProductUpVote = this.handleProductUpVote.bind(this);
+  //   this.handleProductDownVote = this.handleProductDownVote.bind(this);
+  // }
   componentDidMount() {
     this.setState({products : Seed.products});
   }
-  handleProductUpVote(productId) {
-    console.log(productId + 'st element was upvoted');
+  handleProductUpVote = (productId) => {
+    console.log(productId + 'st element was liked');
     console.log(this);
     let newProducts = this.state.products.map((product)=>{
       if(product.id === productId){
@@ -58,8 +54,8 @@ class ProductList extends React.Component {
     });
     this.setState({products : newProducts});
   }
-  handleProductDownVote(productId) {
-    console.log(productId + 'st element was upvoted');
+  handleProductDownVote = (productId) => {
+    console.log(productId + 'st element was disliked');
     console.log(this);
     let newProducts = this.state.products.map((product)=>{
       if(product.id === productId){
